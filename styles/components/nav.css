@@ -1,0 +1,64 @@
+nav {
+	background-color: var(--nav-background);
+	color: var(--nav-foreground);
+	box-shadow: var(--nav-shadow);
+	position: relative;
+	backdrop-filter: blur(var(--nav-blur));
+
+	position: sticky;
+	top: 0;
+	z-index: 1;
+}
+
+nav a {
+	color: inherit;
+	text-decoration: none;
+}
+
+nav .brand {
+	font-size: 1.5rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+nav .brand img {
+	filter: drop-shadow(var(--acm-blue-glow));
+	height: 4rem;
+	margin: 0.5rem 0.75rem;
+	/* Uncompensate the glow for consistent margins. */
+	margin-left: -1rem;
+}
+
+nav h1 {
+	font-weight: 600;
+	font-size: 1.5rem;
+}
+
+nav h1 span.highlight {
+	font-weight: 700;
+}
+
+nav > .container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	margin: 0 auto;
+	padding: 0 var(--page-padding);
+
+	width: 100%;
+	max-width: var(--nav-width);
+}
+
+nav ul {
+	list-style: none;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 1.5rem;
+
+	font-weight: 600;
+	font-size: 1.25rem;
+}

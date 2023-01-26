@@ -1,0 +1,19 @@
+header.alert-bar {
+	background-color: #05A3FF;
+	text-align: center;
+	padding: 0.5em 0;
+}
+
+header.alert-bar,
+header.alert-bar a {
+	color: white;
+}
+
+header.alert-bar p {
+	font-size: 1rem;
+}
+
+header.alert-bar > * {
+	margin: 0 auto;
+	max-width: var(--max-width);
+}

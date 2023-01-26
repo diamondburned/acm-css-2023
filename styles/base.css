@@ -1,0 +1,50 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	color: var(--foreground);
+	background-color: var(--background);
+	font-family: 'Poppins', sans-serif;
+	min-height: 100vh;
+}
+
+main {
+	margin: 0 auto;
+	padding: 0 var(--page-padding);
+	max-width: var(--page-width);
+}
+
+p {
+	font-size: 1.2rem;
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+p .highlight {
+	font-weight: 600;
+}
+
+a {
+	color: var(--acm-blue);
+}
+
+img {
+	border-radius: var(--border-radius);
+}
+
+img.acm-diamond {
+	filter: drop-shadow(var(--acm-blue-glow-big));
+	overflow: visible;
+}
+
+h1,
+h2,
+h3 {
+	font-weight: 600;
+}
+
+.highlight.acm-blue {
+	color: var(--acm-blue);
+}

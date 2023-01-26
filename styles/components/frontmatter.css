@@ -1,0 +1,87 @@
+main.frontmatter {
+	padding: 0;
+}
+
+main.frontmatter > section {
+	margin: var(--frontmatter-section-margin) var(--page-padding);
+	text-align: center;
+	overflow: visible;
+}
+
+main.frontmatter > section h1 {
+	font-size: 4rem;
+	font-weight: 600;
+}
+
+main.frontmatter > section > * {
+	margin: calc(var(--frontmatter-section-margin) / 2) auto;
+}
+
+main.frontmatter > section > hgroup > * {
+	margin: calc(var(--frontmatter-section-margin) / 4) auto;
+}
+
+main.frontmatter > section p.narrow {
+	max-width: var(--frontmatter-narrow);
+}
+
+main.frontmatter > section img {
+	display: block;
+	max-width: 100%;
+}
+
+main.frontmatter > section.left,
+main.frontmatter > section.right {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+main.frontmatter > section.left {
+	flex-direction: row-reverse;
+}
+
+main.frontmatter > section.right {
+	flex-direction: row;
+}
+
+main.frontmatter > section.left > div.container,
+main.frontmatter > section.right > div.container {
+	display: block;
+	flex: 1;
+	max-width: max(50%, var(--frontmatter-narrow));
+	margin: 0; /* flex doesn't apply margins the way we want */
+}
+
+main.frontmatter > section.left > aside,
+main.frontmatter > section.right > aside {
+	max-width: 30%;
+	height: 100%;
+	margin: 0 2rem;
+}
+
+main.frontmatter > section.left > div.container {
+	text-align: right;
+}
+
+main.frontmatter > section.right > div.container {
+	text-align: left;
+}
+
+@media only screen and (max-width: 768px) {
+	main.frontmatter > section.left,
+	main.frontmatter > section.right {
+		flex-direction: column;
+	}
+
+	main.frontmatter > section.left > aside,
+	main.frontmatter > section.right > aside {
+		max-width: 50%;
+	}
+
+	main.frontmatter > section.left > div.container,
+	main.frontmatter > section.right > div.container {
+		text-align: center;
+	}
+}
+

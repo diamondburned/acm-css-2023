@@ -1,0 +1,25 @@
+:root {
+	--acm-blue: #05A3FF;
+	--acm-blue-glow: 0px 0px 25px rgba(44, 145, 198, 0.5);
+	--acm-blue-glow-big: 0 10px 40px rgba(44,145,198,.5);
+
+	--background: #F8F8F8;
+	--foreground: #0D0D0D;
+	--border-radius: 20px;
+
+	--nav-width: 1000px;
+	--nav-foreground: black;
+	--nav-background: rgba(248, 248, 248, 0.93);
+	--nav-shadow: 0px 2px 10px rgba(16, 19, 21, 0.1);
+	--nav-blur: 10px;
+
+	--frontmatter-section-margin: min(8rem, 15vh); /* vertical */
+	--frontmatter-narrow: 70ch;
+
+	--page-padding: min(2rem, 2vw);
+	--page-width: 1280px;
+}
+
+@media (prefers-color-scheme: dark) {
+
+}
