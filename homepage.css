@@ -1,0 +1,26 @@
+#hero aside svg {
+	width: 100%;
+	height: 100%;
+}
+
+#pillars .acm-diamond {
+	padding: 80px;
+	margin-right: -80px;
+	aspect-ratio: 1/1;
+	border-radius: 50%;
+	background-color: var(--acm-accent);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#pillars .acm-diamond div.container {
+	max-width: none;
+}
+
+#pillars ul {
+	font-size: calc(var(--font-size) * 1.5);
+	list-style: none;
+}

@@ -2,7 +2,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-<link rel="stylesheet" href="styles/all.css">
+<link rel="stylesheet" href="/styles/all.css">
+<link rel="stylesheet" href="/homepage.css">
+<title>acmCSUF</title>
 
 <header class="alert-bar">
 	<p>
@@ -13,120 +15,263 @@
 <nav>
 	<div class="container">
 		<a href="/" class="brand acm-blue">
-			<img class="logo" src="assets/base/acm-logo.svg" alt="ACM">
+			<img class="logo" src="/assets/base/acm-logo.svg" alt="ACM">
 			<h1><span class="highlight acm-blue">CSUF</span> chapter</h1>
 		</a>
-		<ul>
-			<li><a href="/about">About</a></li>
-			<li><a href="/events">Events</a></li>
-			<li><a href="/paths">Paths</a></li>
-			<li><a href="/blog">Blog</a></li>
-		</ul>
+		<div>
+			<button aria-controls="nav-menu">
+				<i class="gg-menu"></i>
+			</button>
+			<ul id="nav-menu">
+				<li><a href="/about">About</a></li>
+				<li><a href="/events">Events</a></li>
+				<li><a href="/branches">Branches</a></li>
+				<li><a href="/blog">Blog</a></li>
+			</ul>
+		</div>
 	</div>
 </nav>
 
-<main class="frontmatter">
-	<section>
-		<hgroup>
-			<h1>About</h1>
-			<h2 class="highlight acm-blue">acmCSUF</h2>
-		</hgroup>
-		<p class="narrow">
-			We are a student chapter for <a href="https://www.acm.org/">
-				<span class="highlight acm-blue">Association for Computing Machinery</span></a>
-			based in California State University, Fullerton. We strive to bring passionate Titans
-			together into a community that promotes innovation, collaboration, creativity, and
-			inclusivity within tech.
+<main class="frontmatter" id="homepage">
+	<section class="left" id="hero">
+		<aside>
+			<svg fill="none" height="747" viewBox="0 0 459 747" width="459" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+				<rect fill="url(#pattern0)" height="175.407" rx="22" stroke="#05A3FF" stroke-width="8" transform="rotate(-45 40.3715 128.273)" width="175.407" x="40.3715" y="128.273">
+				</rect>
+				<rect fill="url(#pattern1)" height="173.407" rx="21" stroke="#05A3FF" stroke-width="8" transform="rotate(-45 169.793 617.777)" width="173.407" x="169.793" y="617.777">
+				</rect>
+				<rect fill="url(#pattern2)" height="173.407" rx="21" stroke="#05A3FF" stroke-width="8" transform="rotate(-45 17.277 463.624)" width="436.082" x="17.277" y="463.624">
+				</rect>
+				<rect fill="#05A3FF" height="107.845" rx="15" transform="rotate(-45 0 282.518)" width="107.845" y="282.518">
+				</rect>
+				<rect fill="#05A3FF" height="107.845" rx="15" transform="rotate(-45 306.484 461.179)" width="107.845" x="306.484" y="461.179">
+				</rect>
+				<defs>
+					<pattern height="1" id="pattern0" patternContentUnits="objectBoundingBox" width="1">
+						<use transform="translate(0.217263 -0.785783) scale(0.000561724) rotate(43.092)" xlink:href="#image0_324_476">
+						</use>
+					</pattern>
+					<pattern height="1" id="pattern1" patternContentUnits="objectBoundingBox" width="1">
+						<use transform="translate(0.455288 -0.532569) scale(0.000479226) rotate(44.21)" xlink:href="#image1_324_476">
+						</use>
+					</pattern>
+					<pattern height="1" id="pattern2" patternContentUnits="objectBoundingBox" width="1">
+						<use transform="matrix(0.000320572 0.000801339 -0.000327345 0.000784759 0.174641 -2.45071)" xlink:href="#image2_324_476">
+						</use>
+					</pattern>
+					<image height="2514" id="image0_324_476" width="3143" xlink:href="/assets/homepage/image1.small.jpg">
+					</image>
+					<image height="2758" id="image1_324_476" width="3448" xlink:href="/assets/homepage/image3.small.jpg">
+					</image>
+					<image height="2304" id="image2_324_476" width="4096" xlink:href="/assets/homepage/image2.small.jpg">
+					</image>
+				</defs>
+			</svg>
+		</aside>
+		<div class="container">
+			<h1>
+				The Largest
+				<br><span class="highlight acm-union">Computer Science</span><br>
+				Community at CSUF
+			</h1>
+			<p>
+				We strive to create the best environment for you to grow as a person and a
+				successful software engineer.
+			</p>
+			<a href="/signup" role="button" class="acm-accent">
+				Be the <b>1024th</b> member today!
+			</a>
+		</div>
+	</section>
+	<div class="acm-milk">
+		<section class="right" id="what-are-we">
+			<aside>
+				<h2>
+					Bringing you the <u>true</u> Computer Science Experience
+				</h2>
+			</aside>
+			<div class="container">
+				<p style="text-align: left">
+					We are a chapter club of the Association of Computing Machinery organization. Our
+					goal is to expose passionate people of all levels to grow their skills in a
+					collaborative community.
+				</p>
+			</div>
+		</section>
+	</div>
+	<section class="right" id="pillars">
+		<aside>
+			<svg fill="none" height="705" viewBox="0 0 445 705" width="445" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+				<rect fill="url(#pattern0)" height="175.407" rx="22" stroke="#05A3FF" stroke-width="6" width="175.407" x="3" y="62">
+				</rect>
+				<rect fill="url(#pattern1)" height="173.407" rx="21" stroke="#05A3FF" stroke-width="8" width="173.407" x="135" y="527">
+				</rect>
+				<rect fill="url(#pattern2)" height="173.407" rx="21" stroke="#05A3FF" stroke-width="8" width="436.082" x="4" y="295">
+				</rect>
+				<rect fill="#05A3FF" height="240" rx="15" width="240" x="204">
+				</rect>
+				<rect fill="#05A3FF" height="107.845" rx="15" width="107.845" x="336" y="523">
+				</rect>
+				<rect fill="#05A3FF" height="107.845" rx="15" width="107.845" y="523">
+				</rect>
+				<defs>
+					<pattern height="1" id="pattern0" patternContentUnits="objectBoundingBox" width="1">
+						<use transform="translate(0.217263 -0.785783) scale(0.000561724) rotate(43.092)" xlink:href="#image0_324_637">
+						</use>
+					</pattern>
+					<pattern height="1" id="pattern1" patternContentUnits="objectBoundingBox" width="1">
+						<use transform="translate(0.455288 -0.532569) scale(0.000479226) rotate(44.21)" xlink:href="#image1_324_637">
+						</use>
+					</pattern>
+					<pattern height="1" id="pattern2" patternContentUnits="objectBoundingBox" width="1">
+						<use transform="matrix(0.000320572 0.000801339 -0.000327345 0.000784759 0.174641 -2.45071)" xlink:href="#image2_324_637">
+						</use>
+					</pattern>
+					<image height="2514" id="image0_324_637" width="3143" xlink:href="/assets/homepage/image1.small.jpg">
+					</image>
+					<image height="2758" id="image1_324_637" width="3448" xlink:href="/assets/homepage/image3.small.jpg">
+					</image>
+					<image height="2304" id="image2_324_637" width="4096" xlink:href="/assets/homepage/image2.small.jpg">
+					</image>
+				</defs>
+			</svg>
+		</aside>
+		<div class="acm-diamond">
+			<div class="container">
+				<h2>We're all about...</h2>
+				<ul>
+					<li>
+						Open Mindedness <i class="gg-chevron-right-o"></i>
+					</li>
+					<li>
+						Communication <i class="gg-chevron-right-o"></i>
+					</li>
+					<li>
+						Exposure <i class="gg-chevron-right-o"></i>
+					</li>
+					<li>
+						Mastery <i class="gg-chevron-right-o"></i>
+					</li>
+					<li>
+						Passion <i class="gg-chevron-right-o"></i>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<section id="get-involved">
+		<img src="/assets/homepage/image4.small.jpg">
+		<p>
+			<a href="/events">
+				Get involved and learn from our <u>weekly events</u> 〉
+			</a>
 		</p>
-		<img class="banner" src="https://acmcsuf.com/assets/jpg/group-photo.jpeg" alt="ACM group photo">
 	</section>
-	<section class="right">
+	<section id="focuses">
+		<h2>
+			Uncover your hidden passion in our curated
+			<span class="highlight acm-accent">Focuses</span>
+		</h2>
+		<p>
+			We made it easy to focus on what
+			<span class="highlight acm-accent">interests you</span>.
+			Explore the different <span class="highlight acm-accent">focuses</span>
+			you can expect from us.
+		</p>
+		<ul class="grid">
+			<li>
+				<img src="/assets/acmfoundry.svg">
+				<p>
+					Visit the <span class="highlight acm-foundry">Foundry</span> and hone your game
+					development skills
+				</p>
+			</li>
+			<li>
+				<img src="/assets/acmalgo.svg">
+				<p>
+					Refine your knowledge of <span class="highlight acm-algo">Algorithms</span> used
+					for FAANG interviews
+				</p>
+			</li>
+			<li>
+				<img src="/assets/acmai.svg">
+				<p>
+					Expose yourself to the new world of <span class="highlight acm-ai">Artificial
+						Intelligence</span>
+				</p>
+			</li>
+			<li>
+				<img src="/assets/acmdev.svg">
+				<p>
+					<span class="highlight acm-dev">Develop</span> semester long projects to show
+					your mom
+				</p>
+			</li>
+			<li>
+				<img src="/assets/acmdesign.svg">
+				<p>
+					Learn to <span class="highlight acm-design">Design</span> UI/UX and web
+					development material
+				</p>
+			</li>
+		</ul>
+	</section>
+	<section span="left" id="connect">
 		<aside>
-			<img class="acm-diamond" src="https://acmcsuf.com/assets/png/hero-photo.png">
+			<!-- https://github.com/edent/SuperTinyIcons -->
+			<a role="button" href="#">
+				<img src="/assets/socials/github.svg" title="GitHub">
+			</button>
+			<a role="button" href="#">
+				<img src="/assets/socials/instagram.svg" title="Instagram">
+			</button>
+			<a role="button" href="#">
+				<img src="/assets/socials/discord.svg" title="Discord">
+			</button>
+			<a role="button" href="#">
+				<img src="/assets/socials/linkedin.svg" title="LinkedIn">
+			</button>
+			<a role="button" href="#">
+				<img src="/assets/socials/youtube.svg" title="YouTube">
+			</button>
 		</aside>
 		<div class="container">
-			<h2>What is ACM?</h2>
+			<h2>What are you waiting for?</h2>
 			<p>
-				ACM is the world's largest educational and scientific computing society, uniting
-				computer scientists and information technologists from around the world. ACM
-				provides the computing field's premier Digital Library and serves its members and
-				the computing profession with leading-edge publications, conferences, and career
-				resources.
+				Connect with us on all of our socials!
 			</p>
 		</div>
 	</section>
-	<section class="left">
-		<aside>
-			<img class="acm-diamond" src="https://acmcsuf.com/assets/png/join-photo.png" alt="Join ACM">
-		</aside>
-		<div class="container">
-			<h2>Your journey into tech starts here</h2>
-			<p>
-				We aim to build a foundation for future industry leaders by developing their technical,
-				professional, and social skills. We facilitate these by offering various events,
-				programs, and initiatives that have been proven to help students start up their careers
-				on the right foot.
-			</p>
-		</div>
+	<section>
+		<h2>Blog</h2>
+		<ul class="grid">
+			<li class="card">
+				<img src="/assets/homepage/image5.small.jpg">
+				<h3>How to get started with Competitive Programming</h3>
+				<p>
+					Competitive programming is a great way to improve your problem solving skills
+					and prepare for technical interviews. Here are some tips to get you started.
+				</p>
+				<a href="/blog/competitive-programming">Read More</a>
+			</li>
+			<li class="card">
+				<img src="/assets/homepage/image6.small.jpg">
+				<h3>How to get started with Competitive Programming</h3>
+				<p>
+					Competitive programming is a great way to improve your problem solving skills
+					and prepare for technical interviews. Here are some tips to get you started.
+				</p>
+				<a href="/blog/competitive-programming">Read More</a>
+			</li>
+			<li class="card">
+				<img src="/assets/homepage/image7.small.jpg">
+				<h3>How to get started with Competitive Programming</h3>
+				<p>
+					Competitive programming is a great way to improve your problem solving skills
+					and prepare for technical interviews. Here are some tips to get you started.
+				</p>
+				<a href="/blog/competitive-programming">Read More</a>
+			</li>
+		</ul>
 	</section>
-	<p>
-		Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
-		egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec
-		eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat
-		eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi,
-		condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt
-		condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in
-		turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor
-		neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi,
-		tincidunt quis, accumsan porttitor, facilisis luctus, metus
-	</p>
-	<p>
-		<strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames
-		ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet,
-		ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em>
-		Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.
-		Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi.
-		Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus
-		lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.
-	</p>
-	<p>
-		Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
-		egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec
-		eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat
-		eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi,
-		condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt
-		condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in
-		turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor
-		neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi,
-		tincidunt quis, accumsan porttitor, facilisis luctus, metus
-	</p>
-	<p>
-		<strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames
-		ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet,
-		ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em>
-		Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.
-		Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi.
-		Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus
-		lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.
-	</p>
-	<p>
-		Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
-		egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec
-		eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat
-		eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi,
-		condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt
-		condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in
-		turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor
-		neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi,
-		tincidunt quis, accumsan porttitor, facilisis luctus, metus
-	</p>
-	<p>
-		<strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames
-		ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet,
-		ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em>
-		Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.
-		Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi.
-		Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus
-		lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.
-	</p>
 </main>

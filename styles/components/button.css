@@ -1,0 +1,10 @@
+button,
+a[role="button"] {
+	display: inline-block;
+	color: var(--acm-light);
+	background-color: var(--color, var(--acm-accent));
+	text-decoration: none;
+	padding: 0.5em 0.75em;
+	border: none;
+	border-radius: var(--border-radius);
+}

@@ -1,0 +1,39 @@
+#!/usr/bin/env nix-shell
+#! nix-shell -i bash -p imagemagick moreutils
+
+compress() {
+	local src="$1"
+	local dst="${src%.*}.small.jpg"
+
+	if [[ "$src" == *".small.jpg" ]]; then
+		return
+	fi
+
+	convert "$src" \
+		-quality 89 \
+		-resize 1800x1800\> \
+		-strip \
+		-interlace JPEG \
+		"$dst"
+	echo "compressed $src"
+}
+
+main() {
+	if [[ ! -d assets ]]; then
+		echo "no assets directory"
+		exit 1
+	fi
+
+	parallel bash "$0" -- \
+		$(find assets \
+			-type f \
+			-name '*.png' -o \
+			-name '*.jpg' -o \
+			-name '*.jpeg')
+}
+
+if (( $# == 0 )); then
+	main
+else
+	compress "$@"
+fi

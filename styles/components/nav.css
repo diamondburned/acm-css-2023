@@ -2,12 +2,33 @@ nav {
 	background-color: var(--nav-background);
 	color: var(--nav-foreground);
 	box-shadow: var(--nav-shadow);
-	position: relative;
 	backdrop-filter: blur(var(--nav-blur));
 
 	position: sticky;
 	top: 0;
 	z-index: 1;
+
+	/* Reserve space for nav::after */
+	padding-bottom: 4px;
+}
+
+nav::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 4px;
+
+	background-color: var(--acm-accent);
+	background-image: var(--acm-union-loop);
+	background-size: 200%;
+	animation: nav-animation 10s linear infinite;
+}
+
+@keyframes nav-animation { 
+    0%   { background-position-x: 200%; }
+    50%  { background-position-x: 100%; }
+    100% { background-position-x: 0%;   }
 }
 
 nav a {
@@ -16,7 +37,6 @@ nav a {
 }
 
 nav .brand {
-	font-size: 1.5rem;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -26,13 +46,12 @@ nav .brand img {
 	filter: drop-shadow(var(--acm-blue-glow));
 	height: 4rem;
 	margin: 0.5rem 0.75rem;
-	/* Uncompensate the glow for consistent margins. */
-	margin-left: -1rem;
+	margin-left: 0;
 }
 
 nav h1 {
 	font-weight: 600;
-	font-size: 1.5rem;
+	font-size: 1em;
 }
 
 nav h1 span.highlight {
@@ -51,6 +70,11 @@ nav > .container {
 	max-width: var(--nav-width);
 }
 
+nav > .container > div {
+	display: flex;
+	position: relative;
+}
+
 nav ul {
 	list-style: none;
 
@@ -58,7 +82,28 @@ nav ul {
 	flex-direction: row;
 	align-items: center;
 	gap: 1.5rem;
+	margin: 0;
+	height: 100%;
 
 	font-weight: 600;
-	font-size: 1.25rem;
+	font-size: 1em;
+}
+
+nav button[aria-controls="nav-menu"] {
+	display: none;
+	align-self: center;
+	background: none;
+	padding: 0;
+	height: 2rem;
+	color: var(--foreground);
+}
+
+@media only screen and (max-width: 768px) {
+	nav button[aria-controls="nav-menu"] {
+		display: block;
+	}
+
+	nav button[aria-controls="nav-menu"] + ul {
+		display: none;
+	}
 }

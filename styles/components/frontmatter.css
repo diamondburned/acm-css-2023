@@ -1,87 +1,104 @@
 main.frontmatter {
 	padding: 0;
+	max-width: none;
 }
 
-main.frontmatter > section {
-	margin: var(--frontmatter-section-margin) var(--page-padding);
+main.frontmatter section {
+	margin: var(--frontmatter-section-margin) auto;
+	padding: 0 var(--page-padding);
+
 	text-align: center;
 	overflow: visible;
+	max-width: var(--page-width);
 }
 
-main.frontmatter > section h1 {
-	font-size: 4rem;
+main.frontmatter h1 {
+	font-size: var(--font-size-large);
 	font-weight: 600;
 }
 
-main.frontmatter > section > * {
+main.frontmatter h2 {
+	font-size: calc(var(--font-size-large) * 0.75);
+	font-weight: 600;
+}
+
+main.frontmatter h3 {
+	font-size: calc(var(--font-size-large) * 0.5);
+	font-weight: 600;
+}
+
+main.frontmatter section > * {
 	margin: calc(var(--frontmatter-section-margin) / 2) auto;
 }
 
-main.frontmatter > section > hgroup > * {
+main.frontmatter section hgroup > *,
+main.frontmatter section div.container > * {
 	margin: calc(var(--frontmatter-section-margin) / 4) auto;
 }
 
-main.frontmatter > section p.narrow {
+main.frontmatter section p.narrow {
 	max-width: var(--frontmatter-narrow);
 }
 
-main.frontmatter > section img {
+main.frontmatter section img {
 	display: block;
 	max-width: 100%;
 }
 
-main.frontmatter > section.left,
-main.frontmatter > section.right {
+main.frontmatter section.left,
+main.frontmatter section.right {
 	display: flex;
+	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
+	gap: 1rem;
 }
 
-main.frontmatter > section.left {
+main.frontmatter section.left {
 	flex-direction: row-reverse;
 }
 
-main.frontmatter > section.right {
+main.frontmatter section.right {
 	flex-direction: row;
 }
 
-main.frontmatter > section.left > div.container,
-main.frontmatter > section.right > div.container {
+main.frontmatter section.left div.container,
+main.frontmatter section.right div.container {
 	display: block;
-	flex: 1;
 	max-width: max(50%, var(--frontmatter-narrow));
 	margin: 0; /* flex doesn't apply margins the way we want */
 }
 
-main.frontmatter > section.left > aside,
-main.frontmatter > section.right > aside {
-	max-width: 30%;
+main.frontmatter section.left aside,
+main.frontmatter section.right aside {
+	max-width: 40%;
 	height: 100%;
-	margin: 0 2rem;
+	margin: 0;
 }
 
-main.frontmatter > section.left > div.container {
-	text-align: right;
-}
-
-main.frontmatter > section.right > div.container {
+main.frontmatter section.left div.container,
+main.frontmatter section.right aside {
 	text-align: left;
 }
 
+main.frontmatter section.left aside,
+main.frontmatter section.right div.container {
+	text-align: right;
+}
+
 @media only screen and (max-width: 768px) {
-	main.frontmatter > section.left,
-	main.frontmatter > section.right {
+	main.frontmatter section.left,
+	main.frontmatter section.right {
 		flex-direction: column;
 	}
 
-	main.frontmatter > section.left > aside,
-	main.frontmatter > section.right > aside {
+	main.frontmatter section.left aside,
+	main.frontmatter section.right aside {
 		max-width: 50%;
 	}
 
-	main.frontmatter > section.left > div.container,
-	main.frontmatter > section.right > div.container {
+	main.frontmatter section.left > div.container,
+	main.frontmatter section.right > div.container {
 		text-align: center;
 	}
 }
-

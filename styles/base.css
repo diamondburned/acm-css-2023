@@ -8,22 +8,16 @@ body {
 	background-color: var(--background);
 	font-family: 'Poppins', sans-serif;
 	min-height: 100vh;
+
+	font-size: var(--font-size);
+	font-weight: 400;
+	line-height: 1.5;
 }
 
 main {
 	margin: 0 auto;
 	padding: 0 var(--page-padding);
 	max-width: var(--page-width);
-}
-
-p {
-	font-size: 1.2rem;
-	font-weight: 400;
-	line-height: 1.5;
-}
-
-p .highlight {
-	font-weight: 600;
 }
 
 a {
@@ -34,17 +28,61 @@ img {
 	border-radius: var(--border-radius);
 }
 
-img.acm-diamond {
-	filter: drop-shadow(var(--acm-blue-glow-big));
-	overflow: visible;
-}
-
 h1,
 h2,
 h3 {
 	font-weight: 600;
 }
 
-.highlight.acm-blue {
-	color: var(--acm-blue);
+.highlight {
+	font-weight: 600;
+	/* Hack to support both solid colors and gradients. */
+	color: transparent;
+	background: var(--color);
+	background-clip: text;
+}
+
+.acm-diamond {
+	overflow: visible;
+	color: var(--acm-light);
+	border: var(--acm-diamond-border) solid var(--acm-accent);
+	border-radius: var(--acm-diamond-radius);
+}
+
+.acm-milk {
+	margin: 80px 0;
+	color: var(--acm-light);
+	background-color: var(--acm-accent);
+	position: relative;
+}
+
+.acm-milk::before,
+.acm-milk::after {
+	content: "";
+	background-size: clamp(500px, 80vw, 1280px) 200px;
+	background-image: url("/assets/acm-milk.svg");
+	background-repeat: repeat-x;
+	position: absolute;
+	z-index: -1;
+	height: 350px;
+}
+
+.acm-milk::before {
+	top: -90px;
+	width: 200%;
+	transform: scaleY(0.75);
+}
+
+.acm-milk::after {
+	bottom: -90px;
+	left: -780px;
+	width: 500%;
+	transform: scaleY(-0.75);
+}
+
+/* Fix css.gg icons. TODO: move this elsewhere. */
+i[class^="gg-"] {
+	--ggs: 1.25;
+	display: inline-block;
+	margin-bottom: -0.05em;
 }
