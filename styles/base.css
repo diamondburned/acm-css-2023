@@ -2,11 +2,15 @@
 	box-sizing: border-box;
 }
 
+html {
+	font-size: var(--font-size-base);
+}
+
 body {
 	margin: 0;
 	color: var(--foreground);
 	background-color: var(--background);
-	font-family: 'Poppins', sans-serif;
+	font-family: "Poppins", sans-serif;
 	min-height: 100vh;
 
 	font-size: var(--font-size);
@@ -40,44 +44,6 @@ h3 {
 	color: transparent;
 	background: var(--color);
 	background-clip: text;
-}
-
-.acm-diamond {
-	overflow: visible;
-	color: var(--acm-light);
-	border: var(--acm-diamond-border) solid var(--acm-accent);
-	border-radius: var(--acm-diamond-radius);
-}
-
-.acm-milk {
-	margin: 80px 0;
-	color: var(--acm-light);
-	background-color: var(--acm-accent);
-	position: relative;
-}
-
-.acm-milk::before,
-.acm-milk::after {
-	content: "";
-	background-size: clamp(500px, 80vw, 1280px) 200px;
-	background-image: url("/assets/acm-milk.svg");
-	background-repeat: repeat-x;
-	position: absolute;
-	z-index: -1;
-	height: 350px;
-}
-
-.acm-milk::before {
-	top: -90px;
-	width: 200%;
-	transform: scaleY(0.75);
-}
-
-.acm-milk::after {
-	bottom: -90px;
-	left: -780px;
-	width: 500%;
-	transform: scaleY(-0.75);
 }
 
 /* Fix css.gg icons. TODO: move this elsewhere. */

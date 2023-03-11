@@ -25,10 +25,16 @@ nav::after {
 	animation: nav-animation 10s linear infinite;
 }
 
-@keyframes nav-animation { 
-    0%   { background-position-x: 200%; }
-    50%  { background-position-x: 100%; }
-    100% { background-position-x: 0%;   }
+@keyframes nav-animation {
+	0% {
+		background-position-x: 200%;
+	}
+	50% {
+		background-position-x: 100%;
+	}
+	100% {
+		background-position-x: 0%;
+	}
 }
 
 nav a {

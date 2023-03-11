@@ -1,46 +1,50 @@
 :root {
-	--acm-cyan:      #05A3FF;
-	--acm-purple:    #9D35E7;
-	--acm-pink:      #FF4365;
-	--acm-blue:      #1E6CFF;
-	--acm-emerald:   #35E792;
-	--acm-lemon:     #FFD029;
-	--acm-orange:    #FF7917;
-	--acm-violet:    #6F16FF;
-	--acm-turquoise: #11D4B1;
-	--acm-red:       #D41153;
-	--acm-light:     #F8F8F8;
-	--acm-dark:      #101315;
-	--acm-gray:      #292C2F;
-	--acm-darker:    #092D71;
-	--acm-darkest:   #052155;
+	--acm-cyan: #05a3ff;
+	--acm-purple: #9d35e7;
+	--acm-pink: #ff4365;
+	--acm-blue: #1e6cff;
+	--acm-emerald: #35e792;
+	--acm-lemon: #ffd029;
+	--acm-orange: #ff7917;
+	--acm-violet: #6f16ff;
+	--acm-turquoise: #11d4b1;
+	--acm-red: #d41153;
+	--acm-light: #f8f8f8;
+	--acm-dark: #101315;
+	--acm-gray: #292c2f;
+	--acm-darker: #092d71;
+	--acm-darkest: #052155;
 
-	--acm-union: linear-gradient(to right,
-		#21D19F 0%,
-		#05A3FF 22.25%,
-		#1E6CFF 51.64%,
-		#9D35E7 75.57%,
-		#FF4365 100%);
-	--acm-union-loop: linear-gradient(to right,
-		#21D19F 00.0%,
-		#05A3FF 12.5%,
-		#1E6CFF 25.0%,
-		#9D35E7 37.5%,
-		#FF4365 50.0%,
-		#9D35E7 62.5%,
-		#1E6CFF 75.0%,
-		#05A3FF 87.5%,
-		#21D19F 100.0%);
+	--acm-union: linear-gradient(
+		to right,
+		#21d19f 0%,
+		#05a3ff 22.25%,
+		#1e6cff 51.64%,
+		#9d35e7 75.57%,
+		#ff4365 100%
+	);
+	--acm-union-loop: linear-gradient(
+		to right,
+		#21d19f 00%,
+		#05a3ff 12.5%,
+		#1e6cff 25%,
+		#9d35e7 37.5%,
+		#ff4365 50%,
+		#9d35e7 62.5%,
+		#1e6cff 75%,
+		#05a3ff 87.5%,
+		#21d19f 100%
+	);
 
-	--acm-algo:           var(--acm-purple);
-	--acm-design:         var(--acm-pink);
-	--acm-dev:            var(--acm-blue);
-	--acm-ai:             var(--acm-emerald);
-	--acm-foundry:        var(--acm-purple);
+	--acm-algo: var(--acm-purple);
+	--acm-design: var(--acm-pink);
+	--acm-dev: var(--acm-blue);
+	--acm-ai: var(--acm-emerald);
+	--acm-foundry: var(--acm-purple);
 	--acm-special-events: var(--acm-lemon);
-	--acm-icpc:           var(--acm-orange);
-	--acm-osc:            var(--acm-turquoise);
-	--acm-marketing:      var(--acm-red);
+	--acm-icpc: var(--acm-orange);
+	--acm-osc: var(--acm-turquoise);
+	--acm-marketing: var(--acm-red);
 
 	--acm-accent: var(--acm-cyan);
 	--acm-diamond-radius: 15px;
@@ -59,48 +63,99 @@
 	--frontmatter-section-margin: min(8rem, 12vh); /* vertical */
 	--frontmatter-narrow: 50ch;
 
-	/* https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/ */
-	/* Settings used:
-	 *    - Minimum viewport width: 600px
-	 *    - Maximum viewport width: 1280px
-	 *    - 1rem: 16px
+	--font-size-base: 16px;
+	/*
+		echo "--font-size: $(./scripts/clamp-font.py --min-font 1.125 --max-font 1.25 --pixels-per-rem 16 --min-width 600 --max-width 1280);"
+		echo "--font-size-small: $(./scripts/clamp-font.py --min-font 1 --max-font 1.135 --pixels-per-rem 16 --min-width 600 --max-width 1280);"
+		echo "--font-size-large: $(./scripts/clamp-font.py --min-font 2.75 --max-font 4 --pixels-per-rem 16 --min-width 600 --max-width 1280);"
 	 */
-	--font-size: clamp(1rem, 0.7794rem + 0.5882vw, 1.25rem);
-	--font-size-small: clamp(0.875rem, 0.6544rem + 0.5882vw, 1.125rem);
-	--font-size-large: clamp(2.25rem, 0.9375rem + 5.8333vw, 4rem);
+	--font-size: clamp(1.125rem, 1.0147rem + 0.2941vw, 1.25rem);
+	--font-size-small: clamp(1rem, 0.8809rem + 0.3176vw, 1.135rem);
+	--font-size-large: clamp(2.75rem, 1.6471rem + 2.9412vw, 4rem);
 
 	--page-padding: min(2rem, 2vw);
 	--page-width: clamp(400px, 90vw, 1280px);
 }
 
 @media (prefers-color-scheme: dark) {
-
 }
 
 /* Use with `column -t -o ' ' -s ' '` */
-.acm-accent         { --color: var(--acm-accent);         }
-.acm-cyan           { --color: var(--acm-cyan);           }
-.acm-purple         { --color: var(--acm-purple);         }
-.acm-pink           { --color: var(--acm-pink);           }
-.acm-blue           { --color: var(--acm-blue);           }
-.acm-emerald        { --color: var(--acm-emerald);        }
-.acm-lemon          { --color: var(--acm-lemon);          }
-.acm-orange         { --color: var(--acm-orange);         }
-.acm-violet         { --color: var(--acm-violet);         }
-.acm-turquoise      { --color: var(--acm-turquoise);      }
-.acm-red            { --color: var(--acm-red);            }
-.acm-light          { --color: var(--acm-light);          }
-.acm-dark           { --color: var(--acm-dark);           }
-.acm-gray           { --color: var(--acm-gray);           }
-.acm-darker         { --color: var(--acm-darker);         }
-.acm-darkest        { --color: var(--acm-darkest);        }
-.acm-union          { --color: var(--acm-union);          }
-.acm-algo           { --color: var(--acm-algo);           }
-.acm-design         { --color: var(--acm-design);         }
-.acm-dev            { --color: var(--acm-dev);            }
-.acm-ai             { --color: var(--acm-ai);             }
-.acm-foundry        { --color: var(--acm-foundry);        }
-.acm-special-events { --color: var(--acm-special-events); }
-.acm-icpc           { --color: var(--acm-icpc);           }
-.acm-osc            { --color: var(--acm-osc);            }
-.acm-marketing      { --color: var(--acm-marketing);      }
+.acm-accent {
+	--color: var(--acm-accent);
+}
+.acm-cyan {
+	--color: var(--acm-cyan);
+}
+.acm-purple {
+	--color: var(--acm-purple);
+}
+.acm-pink {
+	--color: var(--acm-pink);
+}
+.acm-blue {
+	--color: var(--acm-blue);
+}
+.acm-emerald {
+	--color: var(--acm-emerald);
+}
+.acm-lemon {
+	--color: var(--acm-lemon);
+}
+.acm-orange {
+	--color: var(--acm-orange);
+}
+.acm-violet {
+	--color: var(--acm-violet);
+}
+.acm-turquoise {
+	--color: var(--acm-turquoise);
+}
+.acm-red {
+	--color: var(--acm-red);
+}
+.acm-light {
+	--color: var(--acm-light);
+}
+.acm-dark {
+	--color: var(--acm-dark);
+}
+.acm-gray {
+	--color: var(--acm-gray);
+}
+.acm-darker {
+	--color: var(--acm-darker);
+}
+.acm-darkest {
+	--color: var(--acm-darkest);
+}
+.acm-union {
+	--color: var(--acm-union);
+}
+.acm-algo {
+	--color: var(--acm-algo);
+}
+.acm-design {
+	--color: var(--acm-design);
+}
+.acm-dev {
+	--color: var(--acm-dev);
+}
+.acm-ai {
+	--color: var(--acm-ai);
+}
+.acm-foundry {
+	--color: var(--acm-foundry);
+}
+.acm-special-events {
+	--color: var(--acm-special-events);
+}
+.acm-icpc {
+	--color: var(--acm-icpc);
+}
+.acm-osc {
+	--color: var(--acm-osc);
+}
+.acm-marketing {
+	--color: var(--acm-marketing);
+}

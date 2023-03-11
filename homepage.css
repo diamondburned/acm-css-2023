@@ -1,26 +1,55 @@
-#hero aside svg {
+aside svg {
 	width: 100%;
 	height: 100%;
 }
 
-#pillars .acm-diamond {
-	padding: 80px;
-	margin-right: -80px;
-	aspect-ratio: 1/1;
-	border-radius: 50%;
-	background-color: var(--acm-accent);
-
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
-#pillars .acm-diamond div.container {
-	max-width: none;
+#pillars div.container {
+	text-align: left;
+	width: fit-content;
 }
 
 #pillars ul {
 	font-size: calc(var(--font-size) * 1.5);
 	list-style: none;
+	padding: 0;
+}
+
+#pillars ul li {
+	margin: 0.5rem 0;
+}
+
+#pillars span[role="image"] {
+	margin: 0.5rem;
+	font-size: calc(var(--font-size) * 2);
+	vertical-align: middle;
+}
+
+.acm-milk {
+	color: var(--acm-light);
+	position: relative;
+}
+
+.acm-milk::before {
+	--extra-height: var(--frontmatter-section-margin);
+
+	content: "";
+	z-index: -1;
+	background-color: var(--acm-accent);
+	position: absolute;
+	width: 100%;
+	height: calc(100% + var(--extra-height));
+	top: calc(-0.5 * var(--extra-height));
+	left: 0;
+	transform: skew(0, -2.5deg);
+	transform-origin: center;
+}
+
+#what-we-are.acm-milk::before {
+	top: calc(-0.65 * var(--extra-height));
+}
+
+#what-we-are section {
+	--margin: calc(1.5 * var(--frontmatter-section-margin));
+	margin-top: var(--margin);
+	margin-bottom: var(--margin);
 }

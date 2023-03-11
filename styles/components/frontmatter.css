@@ -66,14 +66,14 @@ main.frontmatter section.left div.container,
 main.frontmatter section.right div.container {
 	display: block;
 	max-width: max(50%, var(--frontmatter-narrow));
-	margin: 0; /* flex doesn't apply margins the way we want */
+	margin: 0 auto; /* flex doesn't apply margins the way we want */
 }
 
 main.frontmatter section.left aside,
 main.frontmatter section.right aside {
 	max-width: 40%;
 	height: 100%;
-	margin: 0;
+	margin: 0 auto;
 }
 
 main.frontmatter section.left div.container,
@@ -89,12 +89,22 @@ main.frontmatter section.right div.container {
 @media only screen and (max-width: 768px) {
 	main.frontmatter section.left,
 	main.frontmatter section.right {
-		flex-direction: column;
+		/* Using display block allows margins to overlap. */
+		display: block;
+	}
+
+	main.frontmatter section > * {
+		margin: calc(var(--frontmatter-section-margin) / 1) auto;
+	}
+
+	main.frontmatter section hgroup > *,
+	main.frontmatter section div.container > * {
+		margin: calc(var(--frontmatter-section-margin) / 2) auto;
 	}
 
 	main.frontmatter section.left aside,
 	main.frontmatter section.right aside {
-		max-width: 50%;
+		max-width: 75%;
 	}
 
 	main.frontmatter section.left > div.container,
